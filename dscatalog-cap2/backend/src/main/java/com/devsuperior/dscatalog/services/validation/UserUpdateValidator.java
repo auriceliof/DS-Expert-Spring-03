@@ -50,3 +50,15 @@ public class UserUpdateValidator implements ConstraintValidator<UserUpdateValid,
 		return list.isEmpty();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
