@@ -86,3 +86,4 @@ public class ResourceServerConfig {
 		return bean;
 	}
 }
+
