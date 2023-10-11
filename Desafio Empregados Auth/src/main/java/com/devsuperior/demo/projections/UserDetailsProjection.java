@@ -7,4 +7,3 @@ public interface UserDetailsProjection {
 	Long getRoleId();
 	String getAuthority();
 }
-

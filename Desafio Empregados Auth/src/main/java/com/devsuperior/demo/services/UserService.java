@@ -14,13 +14,14 @@ import com.devsuperior.demo.projections.UserDetailsProjection;
 import com.devsuperior.demo.repositories.UserRepository;
 
 @Service
-public class UserService implements UserDetailsService{
+public class UserService implements UserDetailsService {
 	
 	@Autowired
 	private UserRepository repository;
-
+	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		
 		List<UserDetailsProjection> result = repository.searchUserAndRolesByEmail(username);
 		if (result.size() == 0) {
 			throw new UsernameNotFoundException("Email not found");
@@ -36,28 +37,3 @@ public class UserService implements UserDetailsService{
 		return user;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
